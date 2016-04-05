@@ -1,0 +1,54 @@
+.faq {
+	height: 615px;
+	background-image: url('../images/faq-bg.jpg');
+	background-position: center;
+	background-size: cover;
+	h2 {
+		font-weight: 700;
+		font-size: em(40);
+		text-transform: uppercase;
+		text-align: center;
+		padding-top: 52px;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: '';
+			top: 90px;
+			left: 334px;
+			background-image: url('../images/under-title.png');
+			width: 331px;
+			height: 46px;
+		}
+	}
+}
+
+#questions, #placement-questions {
+	margin-top: 80px;
+	h6 {
+		font-size: em(14);
+		color: #fff;
+		margin-top: 13px;
+		margin-bottom: -2px;
+		background-image: url('../images/question-bg.jpg');
+		background-repeat: repeat-x;
+		border: 1px solid #530d00;
+		border-radius: 5px;
+	}
+	p {
+		font-size: em(14);
+		line-height: 18px;
+		color: #fff;
+	}
+}
+
+.ui-widget-content {
+	background-color: transparent;
+	border: 1px solid #530d00;
+	border-radius: 5px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.ui-state-active {
+	color: #d82200 !important;
+}

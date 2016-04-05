@@ -1,0 +1,162 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$american-name: 'american';
+$american-x: 68px;
+$american-y: 0px;
+$american-offset-x: -68px;
+$american-offset-y: 0px;
+$american-width: 43px;
+$american-height: 30px;
+$american-total-width: 154px;
+$american-total-height: 91px;
+$american-image: '../images/sprite.png';
+$american: (68px, 0px, -68px, 0px, 43px, 30px, 154px, 91px, '../images/sprite.png', 'american', );
+$discover-name: 'discover';
+$discover-x: 68px;
+$discover-y: 30px;
+$discover-offset-x: -68px;
+$discover-offset-y: -30px;
+$discover-width: 43px;
+$discover-height: 30px;
+$discover-total-width: 154px;
+$discover-total-height: 91px;
+$discover-image: '../images/sprite.png';
+$discover: (68px, 30px, -68px, -30px, 43px, 30px, 154px, 91px, '../images/sprite.png', 'discover', );
+$like-name: 'like';
+$like-x: 0px;
+$like-y: 0px;
+$like-offset-x: 0px;
+$like-offset-y: 0px;
+$like-width: 68px;
+$like-height: 30px;
+$like-total-width: 154px;
+$like-total-height: 91px;
+$like-image: '../images/sprite.png';
+$like: (0px, 0px, 0px, 0px, 68px, 30px, 154px, 91px, '../images/sprite.png', 'like', );
+$master-name: 'master';
+$master-x: 0px;
+$master-y: 61px;
+$master-offset-x: 0px;
+$master-offset-y: -61px;
+$master-width: 43px;
+$master-height: 30px;
+$master-total-width: 154px;
+$master-total-height: 91px;
+$master-image: '../images/sprite.png';
+$master: (0px, 61px, 0px, -61px, 43px, 30px, 154px, 91px, '../images/sprite.png', 'master', );
+$none-name: 'none';
+$none-x: 0px;
+$none-y: 30px;
+$none-offset-x: 0px;
+$none-offset-y: -30px;
+$none-width: 47px;
+$none-height: 31px;
+$none-total-width: 154px;
+$none-total-height: 91px;
+$none-image: '../images/sprite.png';
+$none: (0px, 30px, 0px, -30px, 47px, 31px, 154px, 91px, '../images/sprite.png', 'none', );
+$paypal-name: 'paypal';
+$paypal-x: 43px;
+$paypal-y: 61px;
+$paypal-offset-x: -43px;
+$paypal-offset-y: -61px;
+$paypal-width: 43px;
+$paypal-height: 30px;
+$paypal-total-width: 154px;
+$paypal-total-height: 91px;
+$paypal-image: '../images/sprite.png';
+$paypal: (43px, 61px, -43px, -61px, 43px, 30px, 154px, 91px, '../images/sprite.png', 'paypal', );
+$visa-name: 'visa';
+$visa-x: 111px;
+$visa-y: 0px;
+$visa-offset-x: -111px;
+$visa-offset-y: 0px;
+$visa-width: 43px;
+$visa-height: 30px;
+$visa-total-width: 154px;
+$visa-total-height: 91px;
+$visa-image: '../images/sprite.png';
+$visa: (111px, 0px, -111px, 0px, 43px, 30px, 154px, 91px, '../images/sprite.png', 'visa', );
+$spritesheet-width: 154px;
+$spritesheet-height: 91px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($american, $discover, $like, $master, $none, $paypal, $visa, );
+$spritesheet: (154px, 91px, '../images/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

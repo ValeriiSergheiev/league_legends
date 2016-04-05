@@ -1,0 +1,210 @@
+.placement-games {
+	height: 1022px;
+	background-image: url('../images/placement_games-bg.jpg');
+	background-position: center;
+	background-size: cover;
+	h2 {
+		font-weight: 700;
+		font-size: em(40);
+		text-transform: uppercase;
+		text-align: center;
+		padding-top: 52px;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: '';
+			top: 90px;
+			left: 334px;
+			background-image: url('../images/under-title.png');
+			width: 331px;
+			height: 46px;
+		}
+	}
+}
+
+.first-row {
+	margin-top: 80px;
+	@include clearfix;
+}
+
+.left-block-placement {
+	float: left;
+	margin-top: 17px;
+	label {
+		font-weight: 700;
+		input {
+			display: none;
+		}
+		span {
+			height: 10px;
+			width: 10px;
+			border: 1px solid #d71800;
+			background-color: #000;
+			border-radius: 3px;
+			display: inline-block;
+			position: relative;
+			margin-right: 10px;
+		}
+		[type=checkbox]:checked + span:before {
+			content: '\2714';
+			position: absolute;
+			top: -5px;
+			left: 0;
+		}
+	}
+}
+
+
+#placement-slider {
+	width: 380px;
+	height: 10px;
+	border-radius: 5px;
+	position: relative;
+	margin-bottom: 13px;
+	&::before {
+		position: absolute;
+		content: 'Placement games needed';
+		top: -35px;
+		left: 0;
+		font-weight: 700;
+		font-size: em(16);
+		color: #fff;
+	}
+}
+
+.ui-widget-header {
+	background-color: #d71800;
+}
+
+.ui-widget-content {
+	background: linear-gradient(#292929, #040404);
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+	background: #000;
+	border: 2px solid #d71800;
+}
+
+.ui-slider .ui-slider-handle {
+	width: 14px;
+	height: 14px;
+	border-radius: 8px;
+}
+
+.right-block-placement {
+	float: right;
+	label {
+		font-weight: 700;
+		font-size: em(16);
+		margin-right: 20px;
+		vertical-align: top;
+		line-height: 40px;
+	}
+}
+
+#placement-select-button {
+	color: #fff;
+}
+
+.ui-state-default {
+	border: 1px solid #530d00;
+	outline: none;
+}
+
+.ui-accordion .ui-accordion-header {
+	margin-top: 13px;
+}
+
+.second-row {
+	margin-top: 130px;
+	@include clearfix;
+}
+
+.edit-info {
+	float: left;
+	h3 {
+		font-weight: 700;
+		font-size: em(24);
+		position: relative;
+		&::after {
+			position: absolute;
+			content: '';
+			left: 0;
+			bottom: -15px;
+			height: 4px;
+			width: 80px;
+			background-color: #d82200;
+		}
+	}
+	span {
+		font-size: em(14);
+		display: block;
+		margin-top: 40px;
+	}
+}
+
+.cards {
+	float: left;
+	margin-top: 12px;
+	li {
+		display: inline-block;
+		a:hover {
+			opacity: .7;
+		}
+	}
+}
+
+.total {
+	float: left;
+	margin-left: 122px;
+	h6 {
+		text-align: center;
+		font-weight: 700;
+		font-size: em(16);
+		width: 200px;
+	}
+	h5 {
+		color: #d82200;
+		text-align: center;
+		font-weight: 700;
+		font-size: em(24);
+		margin-top: 19px;
+	}
+	button {
+		@include red-btn(165px);
+		font-size: em(12);
+		font-weight: 400;
+		margin-top: 10px;
+	}
+}
+
+.yes {
+	display: none;
+}
+.no {
+	display: inline-block;
+}
+
+
+.like {
+	float: right;
+	position: relative;
+	top: -30px;
+	a:hover {
+		opacity: .7;
+	}
+}
+
+#total-games {
+	border: none;
+	background-color: transparent;
+	width: 20px;
+	font-weight: 700;
+	font-size: em(16);
+	color: #fff;
+}
+
+#total-dollars {
+	@extend #total-games;
+	width: 90px;
+}
