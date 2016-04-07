@@ -1,0 +1,32 @@
+.draft-games {
+	@extend .placement-games
+}
+
+#draft-slider {
+	@extend #placement-slider;
+	&::before {
+		content: 'Draft games needed';
+		top: -45px;
+	}
+	/*.ui-slider-handle {
+		//background-color: green;
+		//position: relative;
+		&::before {
+			position: absolute;
+			top: -20px;
+			left: 3px;
+			content: '7';
+			color: #d71800;
+		}
+	}*/
+}
+
+
+.total-draft {
+	h6 {
+		margin-top: 16px;
+	}
+	h5 {
+		margin-top: 50px;
+	}
+}

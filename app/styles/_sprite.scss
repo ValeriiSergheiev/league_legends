@@ -22,6 +22,17 @@ $american-total-width: 154px;
 $american-total-height: 91px;
 $american-image: '../images/sprite.png';
 $american: (68px, 0px, -68px, 0px, 43px, 30px, 154px, 91px, '../images/sprite.png', 'american', );
+$crown-name: 'crown';
+$crown-x: 111px;
+$crown-y: 30px;
+$crown-offset-x: -111px;
+$crown-offset-y: -30px;
+$crown-width: 33px;
+$crown-height: 22px;
+$crown-total-width: 154px;
+$crown-total-height: 91px;
+$crown-image: '../images/sprite.png';
+$crown: (111px, 30px, -111px, -30px, 33px, 22px, 154px, 91px, '../images/sprite.png', 'crown', );
 $discover-name: 'discover';
 $discover-x: 68px;
 $discover-y: 30px;
@@ -91,7 +102,7 @@ $visa: (111px, 0px, -111px, 0px, 43px, 30px, 154px, 91px, '../images/sprite.png'
 $spritesheet-width: 154px;
 $spritesheet-height: 91px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($american, $discover, $like, $master, $none, $paypal, $visa, );
+$spritesheet-sprites: ($american, $crown, $discover, $like, $master, $none, $paypal, $visa, );
 $spritesheet: (154px, 91px, '../images/sprite.png', $spritesheet-sprites, );
 
 /*

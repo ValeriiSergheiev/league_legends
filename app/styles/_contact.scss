@@ -1,0 +1,72 @@
+.contact {
+	@extend .about;
+	background-position: center top;
+	height: calc(100vh - 100px - 410px);
+	min-height: 540px;
+}
+
+.contact-wrapper {
+	@include clearfix;
+	margin-top: 85px;
+}
+
+.contact-left {
+	float: left;
+	input {
+		display: block;
+		width: 280px;
+		height: 30px;
+		border: 1px solid #530d00;
+		background-color: #000;
+		border-radius: 3px;
+		margin-bottom: 15px;
+		color: #fff;
+		padding: 0 10px;
+		font-size: em(14);
+	}
+}
+
+#contact-selectmenu-button {
+	background-image: url('../images/select-bg.jpg');
+	color: darken(#fff, 45%);
+}
+
+.contact-right {
+	float: right;
+	textarea {
+		width: 640px;
+		height: 115px;
+		padding: 10px;
+		background-color: #000;
+		border: 1px solid #530d00;
+		border-radius: 3px;
+		color: #fff;
+		font-size: em(14);
+	}
+	p {
+		text-align: right;
+		font-size: em(12);
+		margin-top: 10px;
+	}
+	h5 {
+		color: #d92000;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: em(24);
+		margin-top: 15px;
+	}
+	h5 + p {
+		max-width: 640px;
+		font-size: em(14);
+		text-align: left;
+		line-height: 22px;
+	}
+	button {
+		@include red-btn (170px);
+		margin: 0 auto;
+		display: block;
+		margin-top: 30px;
+	}
+}
+
+

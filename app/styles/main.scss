@@ -467,8 +467,20 @@ footer {
   @include sprite($like);
   display: block;
 }
+.icon-crown {
+  @include sprite($crown);
+  display: inline-block;
+}
 /*end sprites*/
 
 @import 'registration';
 @import 'faq';
 @import 'placement';
+@import 'per';
+@import 'duoq';
+@import 'draft';
+@import 'about';
+@import 'accaunt';
+@import 'discount';
+@import 'buy';
+@import 'contact';

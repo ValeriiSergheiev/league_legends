@@ -1,0 +1,13 @@
+.about {
+	@extend .placement-games;
+	background-image: url('../images/about-bg.jpg');
+	height: 1019px;
+	article {
+		margin-top: 90px;
+		p {
+			font-size: em(14);
+			margin-top: 20px;
+			text-align: justify;
+		}
+	}
+}

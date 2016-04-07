@@ -1,0 +1,24 @@
+.duoq-boosting {
+	@extend .per-games;
+}
+
+#duoq-top-select-button, #duoq-bottom-select-button {
+	color: #fff;
+}
+
+.left-block-duoq {
+	@extend .left-block-placement;
+	margin-top: 0;
+}
+
+.center-block-placement-duoq {
+	@include clearfix;
+	@extend .center-block-placement;
+	img {
+		float: left;
+		&:nth-child(2) {
+			margin: 37px 25px 0;
+		}
+	}
+
+}

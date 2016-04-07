@@ -1,0 +1,28 @@
+.per-games {
+	@extend .placement-games;
+}
+
+#division-select-button {
+	color: #fff;
+}
+
+.center-block-placement {
+	float: left;
+	margin: -31px 0 0 38px;
+}
+
+.left-block-placement {
+	margin-top: 37px;
+}
+
+.second-row-per {
+	@extend .second-row;
+	margin-top: 76px;
+}
+
+.total-per {
+	@extend .total;
+	h5 {
+		margin-top: 2px;
+	}
+}

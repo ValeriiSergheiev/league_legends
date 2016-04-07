@@ -1,0 +1,50 @@
+.discount {
+	@extend .placement-games;
+	height: calc(100vh - 100px - 410px);
+	min-height: 450px;
+	background-image: url('../images/discounts-bg.jpg');
+	background-position: center top;
+}
+
+.discount-content {
+	@include clearfix;
+	margin-top: 80px;
+}
+
+.discount-left {
+	float: left;
+	h5 {
+		font-size: em(24);
+	}
+	h3 {
+		font-weight: 700;
+		font-size: em(40);
+		margin: 50px 0 0 50px;
+		position: relative;
+		span {
+			color: #d92300;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: -25px;
+			left: 0;
+			height: 6px;
+			width: 130px;
+			background-color: #d92300;
+		}
+	}
+}
+
+.discount-right {
+	float: right;
+	article {
+		width: 475px;
+		p {
+			font-size: em(14);
+			font-weight: 500;
+			margin-bottom: 20px;
+			line-height: em(18);
+		}
+	}
+}
